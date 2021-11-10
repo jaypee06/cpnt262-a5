@@ -6,22 +6,16 @@ const dotenv = require('dotenv').config();
 const express = require('express')
 const app = express()
 
-// static server
 app.use(express.static('public'))
 
-/*****************/
-/* Define routes */
-/*****************/
 
 const api = require('./routes/api')
-app.use('/api', api)
-
-
+app.use(api)
 app.use((req, res) => {
 
-  if (req.url.startsWith('/api')) {
+  if (req.url.startsWith('/info')) {
     res.status(404)
-    res.send({error:'Url Not Found'})
+    res.send({error:'File Not Found'})
 
   } else {
 
