@@ -3,8 +3,8 @@
 ## Author Name: John Paul Adobas
 
 ## Links to:
--[Github Repo](https://github.com/jaypee06/cpnt262-a5.git)
--[Heroku Domain](https://jaypees-app.herokuapp.com)
+- [Github Repo](https://github.com/jaypee06/cpnt262-a5.git)
+- [Heroku Domain](https://jaypees-app.herokuapp.com)
     
 
 
