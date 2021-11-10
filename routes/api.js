@@ -36,7 +36,6 @@ const NBASchema = new mongoose.Schema({
 
 const basketball = mongoose.model('Basketball', NBASchema)
 
-const ball = require('../models/images')
 
 
 rout.get('/info/data', async(req, res) =>{
