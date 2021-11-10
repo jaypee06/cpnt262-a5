@@ -1,7 +1,7 @@
 const express = require('express') // Import Express
-const rout = express.Router() // Impporting router to `server.js`
+const rout = express.Router() // Importing router to `server.js`
 
-// Connect to MongoDB
+// Connection to MongoDB
 const mongoose = require('mongoose'); 
 
 mongoose.connect(
@@ -21,7 +21,7 @@ mongoose.connect(
 
   });
 
-// Step 1: Schema
+// Create new Schema
 const NBASchema = new mongoose.Schema({
     id: Number,
     title: String,
@@ -34,10 +34,11 @@ const NBASchema = new mongoose.Schema({
     creditURL: String,
 })
 
+//Create new mongoose model
 const basketball = mongoose.model('Basketball', NBASchema)
 
 
-
+//Show API from database
 rout.get('/info/data', async(req, res) =>{
 
   let items = await basketball.find()
@@ -45,6 +46,7 @@ rout.get('/info/data', async(req, res) =>{
 
 })
 
+//Searching/retrieving data from database using ID
 rout.get('/info/data/:id', async(req, res) => {
 
   try {
@@ -55,12 +57,15 @@ rout.get('/info/data/:id', async(req, res) => {
     }
 
     res.send(items)
+
+  //Error Occur if endpoint is not existing
   } catch(err) {
     res.send({error:'Data not found!!'})
   }
 
 })
 
+//exporting api.js
 module.exports = rout
 
 

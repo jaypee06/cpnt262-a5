@@ -1,3 +1,5 @@
+
+//List of API
 const randomImages = [
     {
       id:  1,
@@ -111,4 +113,5 @@ const randomImages = [
     }
 ];
 
+//exporting this API
 module.exports = randomImages
