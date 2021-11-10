@@ -11,8 +11,8 @@
 
 
 ## Atrributions
-    - [Icah Velga](https://github.com/Icahpv)
-    - [Tony Grimes](https://github.com/acidtone)
+    - [Icah Velga] (https://github.com/Icahpv)
+    - [Tony Grimes] (https://github.com/acidtone)
     
 
 
